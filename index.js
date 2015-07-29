@@ -49,7 +49,7 @@ module.exports = {
                 "requireReturn": false
             }
         ],
-        "require-jsdoc": 2,
+        "require-jsdoc/require-jsdoc": 2,
         "quotes": [2, "single"],
         "eqeqeq": 2,
         "strict": 2,
