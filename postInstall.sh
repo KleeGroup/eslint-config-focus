@@ -1,0 +1,11 @@
+cd node_modules
+cd eslint
+npm link
+cd ../babel-eslint
+npm link
+cd ../eslint-plugin-filenames
+npm link
+cd ../eslint-plugin-react
+npm link
+cd ../eslint-plugin-require-jsdoc
+npm link
