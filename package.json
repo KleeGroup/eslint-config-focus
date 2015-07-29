@@ -1,0 +1,32 @@
+{
+  "name": "eslint-config-focus",
+  "version": "0.0.1",
+  "description": "Eslint shared configuration for all Focus projects",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KleeGroup/eslint-config-focus.git"
+  },
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "focus",
+    "kleegroup"
+  ],
+  "author": "Stanislas Bernard",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KleeGroup/eslint-config-focus/issues"
+  },
+  "homepage": "https://github.com/KleeGroup/eslint-config-focus#readme",
+  "devDependencies": {
+      "babel-eslint": "3.1.23",
+      "eslint": "0.24.1",
+      "eslint-plugin-filenames": "0.1.1",
+      "eslint-plugin-react": "2.7.1",
+      "eslint-plugin-require-jsdoc": "1.0.4"
+  }
+}
