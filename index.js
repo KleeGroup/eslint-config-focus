@@ -42,7 +42,7 @@ module.exports = {
         "node": true
     },
     "rules": {
-        "require-jsdoc/require-jsodc": 2,
+        "require-jsdoc/require-jsdoc": 2,
         "valid-jsdoc": [
             2,
             {
