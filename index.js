@@ -42,6 +42,7 @@ module.exports = {
         "node": true
     },
     "rules": {
+        "require-jsdoc/require-jsodc": 2,
         "valid-jsdoc": [
             2,
             {
@@ -49,7 +50,6 @@ module.exports = {
                 "requireReturn": false
             }
         ],
-        "require-jsdoc/require-jsdoc": 2,
         "quotes": [2, "single"],
         "eqeqeq": 2,
         "strict": 2,
