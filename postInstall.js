@@ -30,8 +30,8 @@ fs.exists(parentNodeModules, function(exists) {
             if (error) {
                 throw error;
             }
-            stdout.pipe(process.stdout);
-            stderr.pipe(process.stderr);
+            console.log(process.stdout);
+            console.log(process.stderr);
         });
     }
 });
