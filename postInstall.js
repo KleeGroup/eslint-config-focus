@@ -25,10 +25,12 @@ fs.exists(parentNodeModules, function(exists) {
             console.log('Adding ' + dependencyKey + '@' + version + ' to your package.json')
             parentPackage.dependencies[dependencyKey] = version;
         });
-
-        fs.unlinkSync(parent + '/package.json');
-        fs.writeFileSync(parent + '/package.json', JSON.stringify(parentPackage, null, 4));
-
-        console.log('All done, please run a npm install after this one completes.');
+        try {
+            fs.unlinkSync(parent + '/package.json');
+            fs.writeFileSync(parent + '/package.json', JSON.stringify(parentPackage, null, 4));
+            console.log('All done, please run a npm install after this one completes.');
+        } catch(e) {
+            console.log('Failed to modify package.json :(');
+        }
     }
 });
