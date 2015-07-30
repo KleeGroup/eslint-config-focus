@@ -1,10 +1,10 @@
 {
     "name": "eslint-config-focus",
-    "version": "0.0.11",
+    "version": "0.0.12",
     "description": "Eslint shared configuration for all Focus projects",
     "main": "index.js",
     "scripts": {
-        "postinstall": "./postInstall.js",
+        "postinstall": "node postInstall.js",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "repository": {
