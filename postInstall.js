@@ -28,7 +28,9 @@ fs.exists(parentNodeModules, function(exists) {
         try {
             fs.unlinkSync(parent + '/package.json');
             fs.writeFileSync(parent + '/package.json', JSON.stringify(parentPackage, null, 4));
-            console.log('All done, please run a npm install after this one completes.');
+            console.warn('**********************************************************************');
+            console.warn('Eslint config done, please run a npm install after this one completes.');
+            console.warn('**********************************************************************');
         } catch(e) {
             console.log('Failed to modify package.json :(');
         }
