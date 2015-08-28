@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-focus",
-    "version": "0.1.7",
+    "version": "0.1.7-1",
     "description": "Eslint shared configuration for all Focus projects",
     "main": "index.js",
     "scripts": {
@@ -28,6 +28,6 @@
         "eslint": "0.24.1",
         "eslint-plugin-filenames": "0.1.1",
         "eslint-plugin-react": "2.7.1",
-        "eslint-plugin-require-jsdoc": "git+https://github.com:Bernardstanislas/eslint-plugin-require-jsdoc.git"
+        "eslint-plugin-require-jsdoc": "git+https://github.com/Bernardstanislas/eslint-plugin-require-jsdoc.git"
     }
 }
