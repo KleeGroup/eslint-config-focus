@@ -1,6 +1,6 @@
 {
     "name": "eslint-config-focus",
-    "version": "0.3.0-rc-0",
+    "version": "0.3.0",
     "description": "Eslint shared configuration for all Focus projects",
     "main": "index.js",
     "scripts": {
