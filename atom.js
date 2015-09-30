@@ -23,13 +23,14 @@ fs.exists(parentNodeModules, function(exists) {
         Object.keys(dependencies).map(function(dependencyKey) {
             var version = dependencies[dependencyKey];
             console.log('Adding ' + dependencyKey + '@' + version + ' to your package.json')
-            parentPackage.dependencies[dependencyKey] = version;
+            parentPackage.devDependencies = parentPackage.devDependencies || {};
+            parentPackage.devDependencies[dependencyKey] = version;
         });
         try {
             fs.unlinkSync(parent + '/package.json');
             fs.writeFileSync(parent + '/package.json', JSON.stringify(parentPackage, null, 4));
             console.warn('**********************************************************************');
-            console.warn('Eslint config done, please run a npm install after this one completes.');
+            console.warn('Eslint config done, please run a npm install to complete the local eslint install.');
             console.warn('**********************************************************************');
         } catch(e) {
             console.log('Failed to modify package.json :(');
