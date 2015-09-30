@@ -84,7 +84,7 @@ module.exports = {
         "react/wrap-multilines": 2,
         "comma-dangle": 2,
         "no-var": 2,
-        "indent": [2, 4, {"indentSwitchCase": true}],
+        "indent": [2, 4, {"SwitchCase": 1}],
         "brace-style": [2, "1tbs", { "allowSingleLine": true }],
         "comma-style": [2, "last"],
         "func-names": 2,
