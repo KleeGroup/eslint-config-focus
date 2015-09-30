@@ -41,7 +41,6 @@ module.exports = {
         "node": true
     },
     "rules": {
-        "require-jsdoc": 2,
         "valid-jsdoc": [
             2,
             {
