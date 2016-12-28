@@ -10,6 +10,12 @@ module.exports = {
     },
     settings: {
         'import/extensions': ['.js', '.jsx'],
+        'import/resolver': {
+            node: {
+                // Note: will not complain if only _one_ of these files exists.
+                extensions: ['.js', '.jsx']
+            }
+        }
     },
     'extends': ['eslint:recommended'],
     'plugins': [
@@ -18,6 +24,14 @@ module.exports = {
         'eslint-plugin-import'
     ],
     'globals': {
+        '__API_ROOT__': false,
+        '__LEGACY_SEARCH_API__': false,
+        '__BASE_URL__': false,
+        '__DEV__': false,
+        '__ANCHOR_CLASS__': false,
+        '__PACKAGE_JSON_PATH__': false,
+        '__USER__': false,
+        '__PROJECT__': false,
         'jQuery': false,
         '$': true,
         'Focus': true,
@@ -83,7 +97,7 @@ module.exports = {
         'react/self-closing-comp': 'error',
         'react/sort-comp': 'error',
         /* Comments */
-        'require-jsdoc': ['error', {
+        'require-jsdoc': ['warn', {
             'require': {
                 'FunctionDeclaration': true,
                 'MethodDefinition': true,
@@ -92,7 +106,7 @@ module.exports = {
             }
         }],
         'valid-jsdoc': [
-            'error',
+            'warn',
             {
                 'requireParamDescription': true,
                 'requireReturn': false
