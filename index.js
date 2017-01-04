@@ -86,7 +86,6 @@ module.exports = {
         'react/no-did-mount-set-state': ['warn', 'disallow-in-func'],
         'react/no-did-update-set-state': ['error', 'disallow-in-func'],
         'react/no-direct-mutation-state': 'error',
-        'react/react-in-jsx-scope': 'error',
         'react/require-default-props': 'error',
         'react/prefer-stateless-function': ['error', { 'ignorePureComponents': true }],
         'react/no-multi-comp': ['error', { 'ignoreStateless': true }],
