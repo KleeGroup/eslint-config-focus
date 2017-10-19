@@ -110,7 +110,7 @@ module.exports = {
         // Warning when using litterals (should be wrapped in JSX, like {'toto'})
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-literals.md
         'react/jsx-no-literals': 'warn',
-        // Error when using component, without import or declaration 
+        // Error when using component, without import or declaration
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-no-undef.md
         'react/jsx-no-undef': 'error',
         // 'react/jsx-sort-prop-types': 'error',
@@ -118,7 +118,7 @@ module.exports = {
         // Error when using JSX, when missing React variable
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-react.md
         'react/jsx-uses-react': 'error',
-        // Marking variable used in JSX as used 
+        // Marking variable used in JSX as used
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-uses-vars.md
         'react/jsx-uses-vars': 'error',
         // Error when using component not in Pascal Case
@@ -148,7 +148,7 @@ module.exports = {
         // Error when declaring mutiple component in one file
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
         'react/no-multi-comp': ['error', { 'ignoreStateless': true }],
-        // Error on unknown DOM property 
+        // Error on unknown DOM property
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
         'react/no-unknown-property': 'error',
         // Warning on missing prop types
@@ -173,8 +173,8 @@ module.exports = {
             'require': {
                 'FunctionDeclaration': true,
                 'MethodDefinition': true,
-                'ClassDeclaration': true,
-                'ArrowFunctionExpression': true
+                'ClassDeclaration': false, // Disabling because of decorators
+                'ArrowFunctionExpression': false // Documenting lambda is too much
             }
         }],
         // Warning uncomplete comments
@@ -190,7 +190,7 @@ module.exports = {
         // Error if not using simple quotes
         // http://eslint.org/docs/rules/quotes
         'quotes': ['error', 'single', 'avoid-escape'],
-        // Error if not using === 
+        // Error if not using ===
         // http://eslint.org/docs/rules/eqeqeq
         'eqeqeq': 'error',
         'strict': 'error',
@@ -266,13 +266,13 @@ module.exports = {
         // No multi line string (use backquote instead of \ in end of line)
         // http://eslint.org/docs/rules/no-multi-str
         'no-multi-str': 'error',
-        // No primitive wrapper 
+        // No primitive wrapper
         // http://eslint.org/docs/rules/no-new-wrappers
         'no-new-wrappers': 'error',
         // No variable redeclare
         // http://eslint.org/docs/rules/no-redeclare
         'no-redeclare': 'error',
-        // No return with an assign 
+        // No return with an assign
         // http://eslint.org/docs/rules/no-return-assign
         'no-return-assign': 'error',
         // No comparing a variable with itself
@@ -287,7 +287,7 @@ module.exports = {
         // No TODO or fixme
         // http://eslint.org/docs/rules/no-warning-commentss
         'no-warning-comments': ['warn', { 'terms': ['todo', 'fixme'], 'location': 'anywhere' }],
-        // Use radix in parseInt 
+        // Use radix in parseInt
         // http://eslint.org/docs/rules/radix
         'radix': 'error',
         // Wrap immediate function call in parenthesis
@@ -311,10 +311,10 @@ module.exports = {
         // Error on extra semi colon
         // http://eslint.org/docs/rules/no-extra-semi
         'no-extra-semi': 'error',
-        // No reassign on function 
+        // No reassign on function
         // http://eslint.org/docs/rules/no-func-assign
         'no-func-assign': 'error',
-        // No sparse arrays 
+        // No sparse arrays
         // http://eslint.org/docs/rules/no-sparse-arrays
         'no-sparse-arrays': 'error',
         // No unreachable code
