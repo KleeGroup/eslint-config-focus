@@ -25,22 +25,11 @@ module.exports = {
     ],
     'globals': {
         '__API_ROOT__': false,
-        '__LEGACY_SEARCH_API__': false,
         '__BASE_URL__': false,
         '__DEV__': false,
         '__ANCHOR_CLASS__': false,
         '__PACKAGE_JSON_PATH__': false,
-        '__USER__': false,
-        '__PROJECT__': false,
-        'jQuery': false,
-        '$': true,
-        'Focus': true,
-        'FocusComponents': true,
         'require': true,
-        'Backbone': true,
-        'React': true,
-        'Fmk': true,
-        '_': true,
         'Promise': true,
         'module': true
     },
@@ -53,7 +42,7 @@ module.exports = {
         // analysis/correctness
         // Check if import can be resolved on file system
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-        'import/no-unresolved': 'error',
+        'import/no-unresolved': 'warning', // In case of alias, this should not be an error
         // Check if the import is correctly done, according to the named export, or the default one
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
         'import/named': 'error',
@@ -135,7 +124,7 @@ module.exports = {
         'react/no-did-mount-set-state': ['warn', 'disallow-in-func'],
         // Error when using setState in didUpdate
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-did-update-set-state.md
-        'react/no-did-update-set-state': ['error', 'disallow-in-func'],
+        'react/no-did-update-set-state': ['warn', 'disallow-in-func'],
         // Error when trying to mutate the state directly
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-direct-mutation-state.md
         'react/no-direct-mutation-state': 'error',
@@ -147,7 +136,7 @@ module.exports = {
         'react/prefer-stateless-function': ['warn', { 'ignorePureComponents': true }],
         // Error when declaring mutiple component in one file
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-multi-comp.md
-        'react/no-multi-comp': ['error', { 'ignoreStateless': true }],
+        'react/no-multi-comp': ['warn', { 'ignoreStateless': true }],
         // Error on unknown DOM property
         // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/no-unknown-property.md
         'react/no-unknown-property': 'error',
@@ -192,7 +181,7 @@ module.exports = {
         'quotes': ['error', 'single', 'avoid-escape'],
         // Error if not using ===
         // http://eslint.org/docs/rules/eqeqeq
-        'eqeqeq': 'error',
+        eqeqeq: ['error', 'always', { null: 'ignore' }],
         'strict': 'error',
         // Error if using not camelcase variables
         // http://eslint.org/docs/rules/camelcase
@@ -202,7 +191,7 @@ module.exports = {
         'no-underscore-dangle': 'off',
         // Constructor should begin with capital letter
         // http://eslint.org/docs/rules/new-cap
-        'new-cap': 'error',
+        'new-cap': 'warn',
         // Error if not using single quotes in JSX
         // http://eslint.org/docs/rules/jsx-quotes
         'jsx-quotes': ['error', 'prefer-single'],
@@ -229,13 +218,13 @@ module.exports = {
         'key-spacing': ['error', { 'beforeColon': false, 'afterColon': true }],
         // Maximum nested callbacks
         // http://eslint.org/docs/rules/max-nested-callbacks
-        'max-nested-callbacks': ['error', 3],
+        'max-nested-callbacks': ['warn', 3],
         // Avoid multiple empty lines (max 2)
         // http://eslint.org/docs/rules/no-multiple-empty-lines
-        'no-multiple-empty-lines': 'error',
+        'no-multiple-empty-lines': 'warn',
         // Quote props only if needed
         // http://eslint.org/docs/rules/quote-props
-        'quote-props': ['error', 'as-needed'],
+        'quote-props': ['warn', 'as-needed'],
         // Do not use variable before they are defined
         // http://eslint.org/docs/rules/no-use-before-define
         'no-use-before-define': 'error',
@@ -244,10 +233,10 @@ module.exports = {
         'default-case': 'error',
         // Prefer foo.bar instead of foo["bar"]
         // http://eslint.org/docs/rules/dot-notation
-        'dot-notation': 'error',
+        'dot-notation': 'warn',
         // Alert should not be used
         // http://eslint.org/docs/rules/no-alert
-        'no-alert': 'error',
+        'no-alert': 'warn',
         // Allowing console logging
         // http://eslint.org/docs/rules/no-console
         'no-console': 'off',
@@ -333,6 +322,8 @@ module.exports = {
         // http://eslint.org/docs/rules/arrow-spacing
         'arrow-spacing': 'error',
         // Ensure spacing around keywords
-        'keyword-spacing': 'error'
+        'keyword-spacing': 'error',
+        // Ensure that function parameter are not reassigned
+        'no-param-reassign': ["error", { "props": true }]
     }
 };
