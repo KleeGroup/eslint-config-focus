@@ -1,33 +1,33 @@
 {
-  "name": "eslint-config-focus",
-  "version": "0.6.0",
-  "description": "Eslint shared configuration for all Focus projects",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/KleeGroup/eslint-config-focus.git"
-  },
-  "keywords": [
-    "eslint",
-    "eslint-config",
-    "focus",
-    "kleegroup"
-  ],
-  "author": "Stanislas Bernard",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/KleeGroup/eslint-config-focus/issues"
-  },
-  "homepage": "https://github.com/KleeGroup/eslint-config-focus#readme",
-  "dependencies": {
-    "babel-eslint": "7.2.3",
-    "eslint": "4.6.1",
-    "eslint-plugin-filenames": "1.2.0",
-    "eslint-plugin-import": "2.7.0",
-    "eslint-plugin-react": "7.3.0"
-  },
-  "devDependencies": {}
+    "name": "eslint-config-focus",
+    "version": "0.6.1",
+    "description": "Eslint shared configuration for all Focus projects",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/KleeGroup/eslint-config-focus.git"
+    },
+    "keywords": [
+        "eslint",
+        "eslint-config",
+        "focus",
+        "kleegroup"
+    ],
+    "author": "Stanislas Bernard",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/KleeGroup/eslint-config-focus/issues"
+    },
+    "homepage": "https://github.com/KleeGroup/eslint-config-focus#readme",
+    "dependencies": {
+        "babel-eslint": "8.2.2",
+        "eslint": "4.18.1",
+        "eslint-plugin-filenames": "1.2.0",
+        "eslint-plugin-import": "2.9.0",
+        "eslint-plugin-react": "7.7.0"
+    },
+    "devDependencies": {}
 }
