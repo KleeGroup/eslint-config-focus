@@ -42,7 +42,7 @@ module.exports = {
         // analysis/correctness
         // Check if import can be resolved on file system
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-unresolved.md
-        'import/no-unresolved': 'warning', // In case of alias, this should not be an error
+        'import/no-unresolved': 'error', // In case of alias, this should be handled with eslint-import-resolver-webpack
         // Check if the import is correctly done, according to the named export, or the default one
         // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/named.md
         'import/named': 'error',
@@ -231,7 +231,7 @@ module.exports = {
         // Switch must have default case, even if empty
         // http://eslint.org/docs/rules/default-case
         'default-case': 'error',
-        // Prefer foo.bar instead of foo["bar"]
+        // Prefer foo.bar instead of foo['bar']
         // http://eslint.org/docs/rules/dot-notation
         'dot-notation': 'warn',
         // Alert should not be used
@@ -324,6 +324,16 @@ module.exports = {
         // Ensure spacing around keywords
         'keyword-spacing': 'error',
         // Ensure that function parameter are not reassigned
-        'no-param-reassign': ["error", { "props": true }]
+        'no-param-reassign': ['error', { 'props': true }],
+        // Ensure proper use of Array function https://eslint.org/docs/rules/array-callback-return
+        'array-callback-return': 'error',
+        // Ensure consistent behaviour for function https://eslint.org/docs/rules/consistent-return
+        'consistent-return': 'error',
+        // Ensure there is no call to arguments.caller https://eslint.org/docs/rules/no-caller
+        'no-caller': 'error',
+        // Ensure there is no empty function without comments https://eslint.org/docs/rules/no-empty-function
+        'no-empty-function': 'error',
+        // Ensure the usage of curly braces for multi-line blocks
+        curly: ['error', 'multi-line']
     }
 };
